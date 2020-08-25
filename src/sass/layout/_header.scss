@@ -1,16 +1,14 @@
 header {
   max-width: 102.4rem;
-  height: 30rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 1rem 5rem;
-  overflow: hidden;
 }
 
 .ads {
-  display: flex;
+  display: none;
   align-items: center;
   img {
     width: 10rem;
@@ -87,6 +85,7 @@ header {
 }
 
 .title {
+  grid-column: 1 / 4;
   border-top: 1px solid $color-secondary;
   border-bottom: 1px solid $color-secondary;
   display: flex;
@@ -117,14 +116,15 @@ nav {
 }
 
 .movies {
-  width: 110%;
+  width: 100%;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   padding: 1rem 0;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   justify-content: center;
-  transform: translateX(-5%);
+
   .movie {
     height: 100%;
     margin: 0;
@@ -164,7 +164,9 @@ nav {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(9, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem 1rem;
     align-items: center;
     justify-content: center;
     li {
@@ -175,6 +177,32 @@ nav {
       text-transform: uppercase;
       text-align: center;
       color: $color-secondary;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    height: 30rem;
+    overflow: hidden;
+  }
+  .ads {
+    display: flex;
+  }
+  .title {
+    grid-column: 2 / 3;
+  }
+
+  .movies {
+    width: 110%;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr;
+    transform: translateX(-5%);
+  }
+  nav {
+    ul {
+      grid-template-columns: repeat(9, minmax(0, 1fr));
+      grid-template-rows: 1fr;
     }
   }
 }
