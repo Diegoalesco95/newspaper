@@ -1,0 +1,55 @@
+include _articles
+
+main
+  .article-one
+    h1 The Great Kate
+    p Shoot'em. Shoot'em. It's a better way to live! Check out <b class="wp">Katherine</b> Hepburn in rare crank from in this <i>1979 60 Minutes interview</i>, waxing on aging, humanity, movies, and bores.
+    .article-one_cta
+      a(href="/") Watch Video
+        i(class="fas fa-long-arrow-alt-right")
+    img(src="assets/images/woman.jpg", alt="Picture of a woman")
+  .article-two
+    img(src="", alt="Picture of a man")
+    h1 Everyone In Old Hollywood was <i>On Acid</i>
+    h2 March 20, 1966
+    p Before Scientology took hold, before they forgot their mantras, before the baby food diet, <i>Vanity Fair</i> reminds.
+    a(href="/") Read More
+    i(class="fas fa-long-arrow-alt-right")
+  .advertising-left
+    span Dreams Lover
+    span The Bobby Darin
+    a(href="/") Book
+    i(class="fas fa-long-arrow-alt-right")
+  .article-central
+    img(src="", alt="Picture of men")
+    small Trending
+    button 
+      i(class="fas fa-share")
+    h1 Brunettes, Redheads Picket Dores Gentlemen Prefer Blondes
+    p But perhaps the most interesting component of the story is the proto-Feminine Mystique liberating power the drug held for many women. The community of discontented Hollywoodwives.
+    .autor
+      img(src="", alt="Picture of man")
+      h2 Jinneuville Martin Jose
+      small March 12, 1966
+    button 
+      i(class="fas fa-caret-left")
+    button 
+      i(class="fas fa-caret-right")
+  .advertising-right
+    span  Good times now
+    span Every Thursday at 8:00pm
+    a(href="/") Book Now
+    img(src="", alt="Picture of a man")
+  .arcticles
+    +articles('assets/image/','Palm leaves','The brand new Hollywood horror movies is here')
+    +articles('assets/image/','A couple','The smoking hero of <i>Vela and Gobson!</i>')
+    +articles('assets/image/','A girl','Elizabeth Taylor\'s life in front of the camera ')
+  .cta
+    h2 Subscribe to all the news
+    p Never miss the latest updates.
+    form
+      label
+        input(type="email", name="email")
+      button Sign me up
+
+
