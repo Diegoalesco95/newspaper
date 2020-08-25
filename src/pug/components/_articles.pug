@@ -1,3 +1,5 @@
-mixin articles(src, alt, title)
-  img(src=src, alt=alt)
-  h2=title
+mixin articles(src, alt, title, text)
+  .article 
+    img(src=src, alt=alt)
+    h2=title
+      i=text

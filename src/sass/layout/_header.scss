@@ -1,5 +1,5 @@
 header {
-  max-width: 90%;
+  max-width: 102.4rem;
   height: 30rem;
   margin: 0 auto;
   display: grid;
@@ -49,9 +49,13 @@ header {
       font-weight: 700;
     }
   }
+  &.left {
+    margin: 2rem auto 2rem 0;
+  }
   &.right {
-    margin: 2rem 0;
+    margin: 2rem 0 2rem auto;
     border-bottom: 1px solid $color-secondary;
+    justify-content: center;
   }
   &_right {
     h2 {
